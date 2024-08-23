@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { handleDragOver, handleGetDropData } from "../../utils/helpers";
-import { widgetLibrary } from "../../utils/library";
+import { handleDragOver, handleGetDropData } from "../utils/helpers";
+import { widgetLibrary } from "../utils/library";
 
 export default function MidArea() {
   const [widgets, setWidgets] = useState([]);
@@ -17,8 +17,12 @@ export default function MidArea() {
       onDragOver={(e) => handleDragOver(e)}
     >
       {"mid area"}
-      {widgets.map((item,i) => {
-        return <div key={item.name + " - " + i} style={{width:'200px'}}>{item.component}</div>;
+      {widgets.map((item, i) => {
+        return (
+          <div key={item.name + " - " + i} style={{ width: "200px" }}>
+            {item.component}
+          </div>
+        );
       })}
     </div>
   );

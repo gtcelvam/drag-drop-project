@@ -1,10 +1,9 @@
 import React from "react";
-import {createRoot} from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import "tailwindcss/tailwind.css";
 import { Provider } from "react-redux";
-import { store } from "../store";
-
+import { store } from "./store";
 
 console.log("hi");
 const container = document.getElementById("root");
