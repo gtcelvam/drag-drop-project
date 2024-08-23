@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Icon from "../src/components/Icon";
+import Icon from "../components/Icon";
 import {
   handleLeftIncrease,
   handleLeftDecrease,
@@ -33,8 +33,8 @@ export const widgetNames = {
   sayHelloForSeconds: "SayHelloForSeconds",
   sayHmm: "sayHmm",
   sayHmmForSeconds: "sayHmmForSeconds",
-  show:"show",
-  hide:"hide"
+  show: "show",
+  hide: "hide",
 };
 
 //widget component
@@ -371,8 +371,7 @@ export const SayHelloForSecondsComponent = ({
   );
 };
 
-export const ShowHideComponent = ({type=widgetNames.show})=>{
-
+export const ShowHideComponent = ({ type = widgetNames.show }) => {
   //hooks
   const dispatch = useDispatch();
 
@@ -380,13 +379,15 @@ export const ShowHideComponent = ({type=widgetNames.show})=>{
 
   //functions
   const handleDisptach = () => {
-    dispatch(handleVisibility(type === widgetNames.show))
-  }
+    dispatch(handleVisibility(type === widgetNames.show));
+  };
 
   return (
     <div
       className="flex flex-row flex-wrap bg-violet text-white px-2 py-1 my-2 text-sm cursor-pointer"
       onClick={handleDisptach}
-    >{text}</div>
-  )
-}
+    >
+      {text}
+    </div>
+  );
+};
